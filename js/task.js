@@ -24,6 +24,36 @@ function createAnimal(name, type, food) {
 
 const myAnimal = createAnimal("Jasper", "dog", "dog food", "mammal");
 
+const myAnimal2 = createAnimal("Cita", "dog", "french fries", "mammal");
+
 myAnimal.eat();
+myAnimal2.eat();
 // Logs:
 // Jasper is a dog and eats dog food
+
+const uslessObject = {
+  _type: "camera",
+  _hasFilm: "yes",
+
+  set type(newType) {
+    this._type = newType;
+  },
+
+  get type() {
+    return this._type;
+  },
+
+  set hasFilm(newFilm) {
+    this._hasFilm = newFilm;
+  },
+
+  get hasFilm() {
+    return this._hasFilm;
+  },
+};
+
+const object = (uslessObject.type = "boat");
+const filmOr = (uslessObject.hasFilm = "nope");
+
+console.log(object);
+console.log(filmOr);
